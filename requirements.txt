@@ -15,6 +15,7 @@ flask-bootstrap==3.3.7.1
 flask-ckeditor==1.0.0
 flask-gravatar==0.5.0
 flask-login==0.6.3
+Flask-Migrate
 flask-sqlalchemy==3.1.1
 flask-wtf==1.2.2
 greenlet==3.2.1
@@ -27,6 +28,7 @@ numpy==2.2.5
 packaging==25.0
 pandas==2.2.3
 platformdirs==4.3.7
+psycopg2-binary
 pyperclip==1.9.0
 python-dateutil==2.9.0.post0
 pytz==2025.2
