@@ -37,19 +37,21 @@
         {{ ckeditor.config(name='body') }}
           {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
 
-    {% for comment in post.comments %}
-    <div class="col-lg-8 col-md-10 mx-auto comment">
-              <ul class="commentList">
-                <li>
-                    <div class="commenterImage">
-                      <img src="{{ gravatar_url(comment.comment_author.email) }}" alt="Avatar" width="50">                    <div class="commentText">
-                      <p>{{ comment.text|safe }}</p>
-                      <span class="date sub-text">{{ comment.comment_author.name }}</span>
-                    </div>
-                </li>
-              </ul>
-            </div>
-    {% endfor %}
+{% for comment in post.comments %}
+  <div class="col-lg-8 col-md-10 mx-auto comment">
+    <ul class="commentList">
+      <li>
+        <div class="commenterImage">
+          <img src="{{ gravatar_url(comment.comment_author.email) }}" alt="Avatar" width="50">
+        </div>
+        <div class="commentText">
+          <p>{{ comment.text|safe }}</p>
+          <span class="date sub-text">{{ comment.comment_author.name }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+{% endfor %}
 
 
           </div>
